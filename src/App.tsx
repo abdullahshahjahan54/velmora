@@ -6,6 +6,7 @@ import { DestinationsSection } from './components/DestinationsSection';
 import { FeaturedToursSection } from './components/FeaturedToursSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { WhyChooseSection } from './components/WhyChooseSection';
+import { AboutSection } from './components/AboutSection';
 import { GallerySection } from './components/GallerySection';
 import { ReviewsSection } from './components/ReviewsSection';
 import { BlogSection } from './components/BlogSection';
@@ -120,7 +121,7 @@ export default function App() {
   // Scroll spy to update active nav state
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'destinations', 'tours', 'experiences', 'why-us', 'gallery', 'blog', 'faq', 'contact'];
+      const sections = ['home', 'destinations', 'tours', 'experiences', 'about', 'why-us', 'gallery', 'blog', 'faq', 'contact'];
       const scrollPos = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -202,8 +203,13 @@ export default function App() {
           <ExperienceSection onStartJourney={() => handleOpenBooking('Custom Bespoke Expedition')} />
         )}
 
+        {/* Dedicated About Section */}
+        {(currentSeoRoute === '/' || currentSeoRoute === '/about') && (
+          <AboutSection onPlanTrip={() => handleOpenBooking('Custom Bespoke Expedition')} />
+        )}
+
         {/* Why Choose VELMORA Pillars */}
-        {(currentSeoRoute === '/' || currentSeoRoute === '/custom-tours') && (
+        {(currentSeoRoute === '/' || currentSeoRoute === '/about' || currentSeoRoute === '/custom-tours') && (
           <WhyChooseSection />
         )}
 
