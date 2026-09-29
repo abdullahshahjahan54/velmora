@@ -1,0 +1,6 @@
+{
+  "name": "VELMORA - Luxury Travel & Tours Agency",
+  "description": "Discover More. Travel Further. Live the Journey. Premium Pakistan & international tour packages, luxury honeymoons, family holidays, and bespoke adventures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
